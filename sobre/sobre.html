@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>HOME3 | TECNOLOGIA </title>
+      <link rel="stylesheet" href="sobre.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato&family=Poppins:wght@600&family=Viga&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="../imagens-icones/casinhahome (2).png">
+   </head>
+   <body>
+   <header>
+      <nav>
+         <div class="menu-icon" onclick="showSlides(1)">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            <a href="../index.html" id="logo-link"><img src="../imagens/LogoHOME3.png" width="120px" alt="logo"></a>
+        </div>
+         <div class="nav-items">
+            <li><a href="../index.html">INÍCIO</a></li>
+            <li><a href="../sobre/sobre.html">SOBRE</a></li>
+            <li><a href="../projetos/projeto.html">PROJETOS</a></li>
+            <li><a href="../contato/contato.html">CONTATO</a></li>
+            
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Pesquisar" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+      </nav>
+      <div class="content">
+         
+        </div>
+      </div>
+   </header>
+   
+   <div class="empresa-info">
+    <div class="empresa-header">
+        <h1 class="empresa-name">EMPRESA</h1>
+        <hr class="empresa-divider">
+    </div>
+    <div class="empresa-content">
+        <p>Com esse panorama de total desbravamento na busca de novas possibilidades, surge uma equipe que observa em meio à pandemia uma possibilidade de transformação, em momento informal preparado por Deus. Ela alia tecnologia a bem-estar, facilitando a linguagem para transformar a vida das pessoas, que juntos co-criam a HOME 3 Tecnologia e Automação.</p>
+        <p>A Home 3 nasce com um olhar plural, sem fronteiras e livre para projetar a inteligência nos mais diversos segmentos, com estratégias que buscam otimizar e facilitar o uso da tecnologia.</p>
+        <p>O futuro já está presente e a tecnologia avançada está a serviço do homem e bem-estar da Humanidade.</p>
+    </div>
+    <div class="empresa-image">
+        <img src="../imagens/confrahome.webp" alt="Imagem da Empresa">
+    </div>
+</div>
+<div class="filosofia">
+    <h1>FILOSOFIA</h1>
+    <div class="vertical-line"></div>
+    <p>Nossa prioridade é realizar seu sonho.</p>
+</div>
+</div>
+
+<div class="secao-valores">
+    <div class="quadrado">
+      <h3>Nossa Missão</h3>
+      <p>Trazer conforto, praticidade e segurança para ambientes familiares e corporativos com soluções contemporâneas em tecnologia.</p>
+    </div>
+    <div class="quadrado">
+      <h3>Nossa Visão</h3>
+      <p>Ser referência no mercado corporativo, sendo reconhecida com uma empresa de inovação e eficiência tecnológica.</p>
+    </div>
+    <div class="quadrado">
+      <h3>Nossos Valores</h3>
+      <p>Paixão pelo trabalho, respeito total as pessoas e excelência em tudo que fazemos e espírito inovador.</p>
+    </div>
+  </div>
+
+
+  <div class="secao-valores-customizada">
+    <div class="imagem imagem-4x3" onclick="abrirGaleria(1)">
+        <img src="/imagenscasacor/IMG_8777-_1_.jpg" alt="Imagem 1">
+        <p>Prêmio Casa Cor (Projeto mais tecnológico)</p>
+    </div>
+    <div class="imagem" onclick="abrirGaleria(2)">
+        <img src="/imagensgmi/premiojoao.webp" alt="Imagem 2">
+        <p>Curso Dale Carnegie</p>
+    </div>
+    <div class="imagem" onclick="abrirGaleria(3)">
+        <img src="/imagensgmi/expo.webp" alt="Imagem 3">
+        <p>EXPO - SP</p>
+    </div>
+</div>
+
+<div id="galeria" class="escondido">
+    <span class="fechar" onclick="fecharGaleria()">&times;</span>
+    <div class="slider">
+        <img id="imagemGaleria" src="" alt="Imagem">
+    </div>
+    <a class="anterior" onclick="mostrarImagem(-1)">&#10094;</a>
+    <a class="proximo" onclick="mostrarImagem(1)">&#10095;</a>
+</div>
+
+
+<!-- Ícone do WhatsApp --> 
+<a href="https://api.whatsapp.com/send?phone=558331421219" target="_blank" class="whatsapp-icon">
+    <img src="../imagens-icones/whatsapp-logo.png" alt="WhatsApp">
+  </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+<footer>
+   <div id="footer_content">
+       <div id="footer_contacts">
+         <img src="../imagens/LogoHOME3.png" alt="Logo" style="width: 100px;">
+
+           <div id="footer_social_media">
+            <a href="https://www.instagram.com/home3tecnologia/" class="footer-link" id="instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/home3tecnologia" class="footer-link" id="facebook" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/home3-tecnologia-5bb13521b/" class="footer-link" id="linkedin" target="_blank">
+               <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+         </div>
+       
+       <ul class="footer-list">
+           <li>
+               <h3>Blog</h3>
+           </li>
+           <li>
+               <a href="https://ravel.com.br/blog/" class="footer-link">Tecnologia</a>
+           </li>
+           <li>
+               <a href="https://klipbox.com.br/?gclid=CjwKCAjw3oqoBhAjEiwA_UaLttSuMyKtsgE2c0Jy3mDqhvvBcUsCQvy5Fq8T4ZE_3zCdLTmtnSTOORoC7bgQAvD_BwE" class="footer-link">Automação</a>
+           </li>
+           <li>
+               <a href="#" class="footer-link">Música</a>
+           </li>
+       </ul>
+
+       <ul class="footer-list">
+           <li>
+               <h3>Produtos</h3>
+           </li>
+           <li>
+               <a href="#" class="footer-link">App</a>
+           </li>
+           <li>
+               <a href="#" class="footer-link">Desktop</a>
+           </li>
+           <li>
+               <a href="#" class="footer-link">Cloud</a>
+           </li>
+       </ul>
+
+       <div id="footer_subscribe">
+           <h3>Contato</h3>
+
+           <p>
+               
+         Digite seu e-mail para ser notificado sobre nossas soluções de notícias
+           </p>
+
+           <div id="input_group">
+               <input type="email" id="email">
+               <button>
+                   <i class="fa-regular fa-envelope"></i>
+               </button>
+           </div>
+       </div>
+   </div>
+
+   <div id="footer_copyright">
+       &#169
+       2023 Todos os direitos reservados
+   </div>
+</footer>
+<script src="sobre.js"></script>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>HOME3 | TECNOLOGIA </title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato&family=Poppins:wght@600&family=Viga&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="./imagens-icones/casinhahome (2).png">
+   </head>
+   <body>
+   <header>
+      <nav>
+         <div class="menu-icon" onclick="showSlides(1)">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            <img src="./imagens/LogoHOME3.png" width="120px" alt="logo">
+         </div>
+         <div class="nav-items">
+            <li><a href="./index.html">INÍCIO</a></li>
+            <li><a href="./sobre/sobre.html">SOBRE</a></li>
+            <li><a href="./projetos/projeto.html">PROJETOS</a></li>
+            <li><a href="./contato/contato.html">CONTATO</a></li>
+            
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Pesquisar" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+      </nav>
+      <div class="content">
+         
+         </div>
+      </div>
+   </header>
+
+      <!--carrossel -->
+   <div class="slideshow-container">
+      <div class="mySlides fade">
+       <div class="numbertext">1 / 3</div>
+       <img src="./imagens/cel.jpg.jpg" alt="Imagem 1" class="carousel-image">
+       <div class="text">HOME3 TECNOLOGIA</div>
+   </div>
+   <div class="mySlides fade">
+       <div class="numbertext">2 / 3</div>
+       <img src="./imagens/luzes.jpg.jpg" alt="Imagem 2" class="carousel-image">
+       <div class="text">HOME3 TECNOLOGIA</div>
+   </div>
+   <div class="mySlides fade">
+       <div class="numbertext">3 / 3</div>
+       <img src="./imagens/0002.jpg" alt="Imagem 3" class="carousel-image">
+       <div class="text">HOME3 TECNOLOGIA</div>
+   </div>
+   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+     <br>
+     <div style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span>
+         <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+     </div>
+
+
+     <div id="fotocasa">
+        <img src="./imagens/Design sem nome (4).png" alt="casa" width="50%">
+            <p>Descubra um mundo onde a tecnologia trabalha a seu favor, tornando cada ação mais simples e eficiente.</p>
+     </div>
+
+     <div class="icon-container">
+      <div class="icon-item">
+         <img src="./imagens-icones/icone-cinema.svg" alt="Ícone 1" class="icon">
+         <p>Cenas</p>
+      </div>
+      <div class="icon-item larger-icon">
+         <img src="./imagens-icones/icone-webcam.svg" alt="Ícone 2" class="icon">
+         <p>Câmeras</p>
+      </div>
+      <div class="icon-item">
+         <img src="./imagens-icones/icone-musica.svg" alt="Ícone 3" class="icon">
+         <p>Multimídia</p>
+      </div>
+      <div class="icon-item">
+         <img src="./imagens-icones/icone-notificacao.svg" alt="Ícone 4" class="icon">
+         <p>Notificações</p>
+      </div>
+      <div class="icon-item">
+         <img src="./imagens-icones/icone-seguranca.svg" alt="Ícone 5" class="icon">
+         <p>Segurança</p>
+      </div>
+      <div class="icon-item">
+         <img src="./imagens-icones/icone-temperatura.svg" alt="Ícone 6" class="icon">
+         <p>Clima</p>
+      </div>
+   </div>
+   
+   <div class="aparelhos">
+      <div class="text-content">
+        <h1>Aplicativo excepcionalmente intuitivo</h1>
+        <p>O aplicativo através do qual você pode configurar, navegar e gerenciar sua casa funciona em um smartphone ou tablet. Usuários podem criar cenas simples e rápidas usando o criador de cenas visuais na interface da web.</p>
+      </div>
+      <div class="image-content">
+        <img src="./imagens-icones/aparelhos.svg" alt="Descrição da imagem">
+      </div>
+    </div>
+    
+    <!-- Ícone do WhatsApp --> 
+    <a href="https://api.whatsapp.com/send?phone=558331421219" target="_blank" class="whatsapp-icon">
+      <img src="./imagens-icones/whatsapp-logo.png" alt="WhatsApp">
+    </a>
+      
+      <script src="script.js"></script>
+   </body>
+
+   <footer>
+      <div id="footer_content">
+          <div id="footer_contacts">
+            <img src="./imagens/LogoHOME3.png" alt="Logo" style="width: 100px;">
+
+              <div id="footer_social_media">
+               <a href="https://www.instagram.com/home3tecnologia/" class="footer-link" id="instagram" target="_blank">
+                   <i class="fa-brands fa-instagram"></i>
+               </a>
+
+               <a href="https://www.facebook.com/home3tecnologia" class="footer-link" id="facebook" target="_blank">
+                   <i class="fa-brands fa-facebook-f"></i>
+               </a>
+
+               <a href="https://www.linkedin.com/in/home3-tecnologia-5bb13521b/" class="footer-link" id="linkedin" target="_blank">
+                  <i class="fa-brands fa-linkedin-in"></i>
+               </a>
+           </div>
+            </div>
+          
+          <ul class="footer-list">
+              <li>
+                  <h3>Blog</h3>
+              </li>
+              <li>
+                  <a href="https://ravel.com.br/blog/" class="footer-link">Tecnologia</a>
+              </li>
+              <li>
+                  <a href="https://klipbox.com.br/?gclid=CjwKCAjw3oqoBhAjEiwA_UaLttSuMyKtsgE2c0Jy3mDqhvvBcUsCQvy5Fq8T4ZE_3zCdLTmtnSTOORoC7bgQAvD_BwE" class="footer-link">Automação</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Música</a>
+              </li>
+          </ul>
+
+          <ul class="footer-list">
+              <li>
+                  <h3>Produtos</h3>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">App</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Desktop</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Home</a>
+              </li>
+          </ul>
+
+          <div id="footer_subscribe">
+              <h3>Contato</h3>
+
+              <p>
+                  
+            Digite seu e-mail para ser notificado sobre nossas soluções de notícias
+              </p>
+
+              <div id="input_group">
+                  <input type="email" id="email">
+                  <button>
+                      <i class="fa-regular fa-envelope"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+
+      <div id="footer_copyright">
+          &#169
+          2023 Todos os direitos reservados
+      </div>
+  </footer>
+</html>

@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-image: url("../imagens/black.png");
+  background-position: center;
+}
+.logo {
+  cursor: pointer;
+  transition: 0.9;
+  margin-top: 8px;
+}
+
+.logo:hover{
+  color: #f3ca4c;
+}
+
+/*Cabeçalho */
+nav{
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+
+/*NOMO/LOGO EMPRESA */
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+
+/*NOMES DO CABEÇALHO*/
+nav .nav-items li a{
+  color: #fff;
+  font-size: 23px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+}
+nav .nav-items li a:hover{
+  color: #b79d57;
+}
+
+/*BARRA DE PESQUISA */
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #0d0d0d;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155, 155, 155, 0.2);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+
+/*LUPA DO BOTÃO*/
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #b79d57;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #ffe680;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #0d0d0d;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: #ffcc00;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+
+
+/* Estilo para o ícone do WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+    z-index: 9999;
+  }
+  
+  /* Estilize o ícone de acordo com suas preferências */
+  .whatsapp-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+
+/* Estilos para a seção de informações da empresa */
+.empresa-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000;
+  }
+  
+  /* Estilo para o nome da empresa */
+  .empresa-name {
+    font-size: 36px;
+    color: #b79d57;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    margin-left: 10px; /* Mova o nome da empresa para a esquerda */
+  }
+  
+  /* Estilo para a linha divisória */
+  .empresa-divider {
+    width: 70px;
+    height: 1px;
+    background-color: #b79d57;
+    margin: 0 auto 30px;
+  }
+  
+  /* Estilo para o conteúdo da empresa */
+  .empresa-content {
+    font-size: 18px;
+    color: #666;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    display: flex; /* Adicione isso para usar flexbox */
+    flex-direction: column; /* Coloque os elementos em coluna */
+  }
+  
+  /* Estilo para os parágrafos dentro do conteúdo da empresa */
+  .empresa-content p {
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  /* Estilo para a imagem da empresa */
+  .empresa-image {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para a imagem da empresa */
+  .empresa-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Largura da imagem */
+    align-self: flex-start; /* Alinhar a imagem à esquerda */
+  }
+  
+
+
+
+
+ /* Estilos para a filosofia */
+.filosofia {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center;
+    margin-top: 20px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  /* Estilo para o título da filosofia */
+  .filosofia h1 {
+    font-size: 24px;
+    color: #b79d57;
+    margin-right: 10px; /* Espaçamento à direita do título */
+  }
+  
+  /* Estilo para o traço vertical */
+  .filosofia .vertical-line {
+    width: 2px; /* Largura do traço vertical */
+    height: 60px; /* Altura do traço vertical */
+    background-color: #b79d57;
+    margin: 0 10px; /* Espaçamento horizontal em ambos os lados do traço */
+  }
+  
+  /* Estilo para o parágrafo da filosofia */
+  .filosofia p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+
+
+
+
+
+  /* Estilos para a seção de valores */
+.secao-valores {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre os quadrados */
+    margin-top: 20px; /* Espaçamento superior */
+  }
+  
+  /* Estilo para cada quadrado */
+  .quadrado {
+    width: calc(30% - 20px); /* Define a largura do quadrado */
+    padding: 20px; /* Espaçamento interno do quadrado */
+    background-color: #0d0d0d; /* Cor de fundo */
+    color: #b79d57; /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilo para os títulos (h3) */
+  .quadrado h3 {
+    font-size: 24px;
+    margin-bottom: 10px; /* Espaçamento inferior */
+    color: #b79d57;
+  }
+  
+  /* Estilo para os parágrafos (p) */
+  .quadrado p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+/* Media Query para telas menores */
+@media screen and (max-width: 950px) {
+    
+    .empresa-name {
+    font-size: 23px;
+    }
+
+    .empresa-divider {
+        height: 0px;
+    }
+
+    .empresa-content p {
+      font-size: 14px;
+      margin-inline: 22px;
+    }
+    .empresa-image img {
+      width: 100%; /* Altere para 100% para ocupar toda a largura */
+    }
+
+    .filosofia h1 {
+        font-size: 18px;
+    }
+
+    .filosofia .vertical-line {
+        width: 1px;
+        height: 50px;
+    }
+
+    .filosofia p {
+        font-size: 15px;
+    }
+
+    .secao-valores {
+      flex-direction: column; /* Coloque os quadrados em coluna */
+      margin-top: 20px;
+    }
+    .quadrado {
+      width: 100%; /* Quadrados ocupando toda a largura */
+    }
+  }
+
+
+
+
+
+/* Estilização para a seção de valores personalizada */
+.secao-valores-customizada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilização para as imagens nas miniaturas */
+.imagem {
+    cursor: pointer;
+    width: 33.33%; /* Defina a largura desejada para que fiquem lado a lado */
+    max-width: 400px; /* Largura máxima */
+    margin: 0 65px; /* Adicione margens horizontais para espaçamento */
+}
+
+/* Estilo para os parágrafos (p) nas imagens */
+.imagem p {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Espaçamento superior entre a imagem e o texto */
+}
+
+/* Aumenta o tamanho das imagens */
+.imagem img {
+    max-width: 100%;
+    height: auto; /* Altura automática para manter a proporção */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para a galeria de imagens */
+#galeria {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+/* Estilos para o botão de fechar */
+.fechar {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para o slider de imagens na galeria */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px; /* Espaçamento interno */
+}
+
+.slider img {
+    max-width: 100%; /* Imagens ajustadas ao tamanho máximo */
+    max-height: 80vh; /* Altura máxima em relação à viewport */
+    margin-bottom: 20px; /* Espaçamento entre as imagens */
+}
+
+/* Estilos para o botão "X" de fechar */
+.fechar {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para os botões de próxima e anterior */
+.anterior, .proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+  
+  .anterior {
+    left: 0;
+  }
+  
+  .proximo {
+    right: 0;
+  }
+  
+  .anterior:hover, .proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+/* Media query para tela de até 950px de largura */
+@media (max-width: 950px) {
+    .secao-valores-customizada {
+        flex-direction: column; /* Empilhe as imagens verticalmente */
+        margin-top: 60px;
+    }
+    
+    /* Estilização para as imagens nas miniaturas em telas menores */
+    .imagem {
+        cursor: pointer;
+        width: 100%; /* Altere a largura para ocupar 100% da tela */
+        max-width: 100%; /* Largura máxima */
+        margin: 0 auto 20px; /* Adicione margens para espaçamento inferior */
+        margin-bottom: 70px;
+    }
+    
+    /* Estilos para o slider de imagens na galeria em telas menores */
+    .slider img {
+        max-width: 100%; /* Imagens ajustadas ao tamanho máximo */
+        max-height: 100%; /* Altura máxima em relação à viewport */
+        margin-bottom: 20px; /* Espaçamento entre as imagens */
+    }
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: #101010;
+    margin-top: 120px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+  }
+  
+  #footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+  }
+  
+  #footer_contacts img {
+    margin-left: 30px; /* Ajuste o valor conforme necessário */
+  }
+  
+  #footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  } 
+  
+  #footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+  }
+  
+  #footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+  }
+  
+  #footer_social_media .footer-link:hover {
+    opacity: 0.8;
+  }
+  
+  
+  
+  
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+  
+  .footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+  }
+  
+  .footer-list .footer-link:hover {
+    color: #b79d57;
+  }
+  
+  #footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  #footer_subscribe p {
+    color: var(--color-neutral-30);
+  }
+  
+  #input_group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(155, 155, 155, 0.2);
+    border-radius: 4px;
+  }
+  
+  #input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+  }
+  
+  #input_group button {
+    background-color: #b79d57;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  
+  #input_group button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  #footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+  }
+  
+  #footer_content, #footer_contacts, #footer_social_media, #footer_social_media .footer-link, #footer_social_media .footer-link i {
+    color: #b79d57;
+  }
+  #footer_content, #footer_contacts, #footer_social_media, #footer_social_media .footer-link, #footer_social_media .footer-link i, .footer-list,  .footer-list .footer-link, #footer_subscribe, #footer_subscribe p {
+    color: #b79d57;
+  }
